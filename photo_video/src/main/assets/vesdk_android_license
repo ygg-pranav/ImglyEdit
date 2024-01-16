@@ -1,0 +1,42 @@
+{
+  "api_token": "i0lFSXyjqwpiiRHSXH_VIQ",
+  "app_identifiers": [
+    "com.yougotagift.YouGotaGiftApp"
+  ],
+  "available_actions": [],
+  "domains": [
+    "https://api.photoeditorsdk.com"
+  ],
+  "enterprise_license": false,
+  "expires_at": null,
+  "features": [
+    "camera",
+    "library",
+    "export",
+    "whitelabel",
+    "customassets",
+    "adjustment",
+    "audio",
+    "brush",
+    "filter",
+    "focus",
+    "frame",
+    "overlay",
+    "sticker",
+    "text",
+    "textdesign",
+    "transform",
+    "trim",
+    "composition",
+    "videolibrary"
+  ],
+  "issued_at": 1683451171,
+  "minimum_sdk_version": "1.0",
+  "owner": "YouGotaGift",
+  "platform": "Android",
+  "products": [
+    "vesdk"
+  ],
+  "version": "2.4",
+  "signature": "kaqbiZTyQiv7pM1cOSG14NOHYnSsrTxEWq2KB22V6EMiiKVxqdHL91nMbFcYue3KMFM9doQ63eDCKMgu0H/peCeHYIXo48ozD70bqqkcoPuvasUwf3NHYBbTzetoHPTZlCpIFRFrW1WounZaWyjZrPRo1IHP8tuvP07SaL46YCVwqXSTuiKinZBIxkLBI4YkZgUKOZfXCazidKdUsmW4nVD89aaUg5vvrMf0WEGokbNQbD2JA/FDLcORuUJnbRYdwvXP+EY1a3jueJ2AxiQWmnvsdPZY1giUqPCnb/HWjS7ZTr//bVzaF35Dqc3I8uJDe2ujVv9W4MoGEUIPFiGIIKSlbrvG3WtIlGbnHFXy3s7PeYbmGC4fwSAx1wOralHJHFwkw38468NsYrnRrcntM/gCacBfD112y9p1Dregc7NAHZyBTmfGM0ENKDDov/RGs5JtEZJ1dxmsDThy7zfjhhwGF7wzA/pFYP60RcUuXzH/lfqVpm7Oqo3DRRnl15P8P84vXWBF0evfB14I8If5h1EPKO3LoR48DsNMi14i9fKyda5FPQShm8pgPv/n347NhFuCtkvRb8V+g97FdRIkhIe3y0F0x+M6z9rG7KNUK8znbT76z8db29qT3ilckd8ccZtIwFEnxoFLBecJbnmlc2Hap0ej0h3J2FsLig3kxsk="
+}

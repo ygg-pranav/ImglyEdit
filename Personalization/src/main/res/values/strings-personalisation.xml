@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="delivery">Delivery</string>
+
+    <string name="available_design_count_template">%1$d Designs</string>
+    <string name="close">Close</string>
+    <string name="name">Name</string>
+    <string name="email_id">Email ID</string>
+    <string name="mobile_no">Mobile No.</string>
+    <string name="delivery_details_screen_header">Delivery</string>
+    <string name="name_error">Please enter your friend name</string>
+    <string name="email_error">Please enter your friend email</string>
+    <string name="delivery_date_error">Please pick delivery date</string>
+    <string name="proceed_to_checkout_button_label">Proceed to Checkout</string>
+    <string name="personalisation_confirmation_screen_header">Confirm</string>
+    <string name="preview">Preview</string>
+    <string name="done">Done</string>
+    <string name="send_this_gift">Send this Gift Card</string>
+
+    <string name="greeting_screen_title">Add Greeting</string>
+    <string name="filter_by_gifs_button_label">GIFs</string>
+    <string name="filter_by_arabic_button_label">Arabic</string>
+    <string name="select_occasion_dialog_title">Select Occasion</string>
+    <string name="browse_occasion_button_label">Browse Occasion</string>
+    <string name="continue_button_label">Continue</string>
+    <string name="custom_text_entry_done_button_label">Done</string>
+    <string name="delivery_details_suggestion">You can send by Email, SMS or both</string>
+    <string name="edit_delivery_footer_label">@string/delivery</string>
+    <string name="confirmation_screen_preview_button_label">@string/preview</string>
+    <string name="gift_receiver_template">Gifting to %1$s</string>
+
+    <string name="add_to_cart_error_toast_title">Something went wrong</string>
+    <string name="add_to_cart_error_toast_description">Please try again</string>
+    <string name="atb_success_toast_title">Added To Cart</string>
+    <string name="atb_success_toast_description">eGift Card added to the cart</string>
+    <string name="update_cart_success_toast_description">Cart has been updated</string>
+    <string name="sender_name">Sender Name</string>
+    <string name="sent_by">Sent by •</string>
+    <string name="skin_button_label">Skip</string>
+
+    <string name="custom_text_entry_text_field_hint">Enter your message here</string>
+    <string name="custom_text_skip_button_label">Skip this step</string>
+    <string name="skipped_personalisation_container_title">You have skipped the personalization!</string>
+    <string name="skipped_personalisation_container_description">Tap here to add your personal touch</string>
+    <string name="personalization_skipped_with_media_only_title">Missed adding greeting cover and personalised message?</string>
+
+
+    <string name="photo_video_picker_screen_title">Add Photo or Video</string>
+    <string name="add_photo_button_label">Add Photo</string>
+    <string name="add_video_button_label">Add Video</string>
+    <string name="divider_button_label">or</string>
+    <string name="skip_photo_video_step_label">Skip this step</string>
+    <string name="review_photo_screen_title">Review Photo</string>
+    <string name="review_video_screen_title">Review Video</string>
+    <string name="media_edit_discard_button_label">Discard</string>
+    <string name="media_edit_continue_button_label">Continue</string>
+    <string name="edit_discard_confirmation_dialog_description">You will lose the edits you made. Do you want to discard ?</string>
+    <string name="edit_discard_confirmation_dialog_negative_text">No</string>
+    <string name="edit_discard_confirmation_dialog_positive_text">Yes</string>
+    <string name="media_edit_label">Edit</string>
+    <string name="create_with_ai_button_label" translatable="false">Create with AI</string>
+    <string name="relationship_with_recipient_select_relationship_label" translatable="false">Select Relationship</string>
+    <string name="generate_message_with_ai_bottom_sheet_title" translatable="false">Generate Message with AI</string>
+    <string name="relationship_with_recipient_text_field_title" translatable="false">Relationship with recipient</string>
+    <string name="button_label_use_this_message" translatable="false">Use This Message</string>
+    <string name="message_tone_title_label" translatable="false">Message Tone</string>
+    <string name="button_label_generate_message" translatable="false">Generate Message</string>
+    <string name="special_note_label" translatable="false">Special note to be included (Optional)</string>
+    <string name="ai_greeting_slider_previous_button_label" translatable="false"><![CDATA[< Previous]]></string>
+    <string name="ai_greeting_slider_next_button_label" translatable="false"><![CDATA[Next >]]></string>
+    <string name="ai_greeting_generation_error_message" translatable="false">Something went wrong</string>
+</resources>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="close">اغلاق</string>
+    <string name="name">اسم</string>
+    <string name="email_id">البريد الإلكتروني</string>
+    <string name="mobile_no">رقم المحمول.</string>
+    <string name="delivery">توصيل</string>
+
+    <string name="browse_occasion_button_label">تصفح المناسبة</string>
+    <string name="delivery_details_screen_header">توصيل</string>
+    <string name="personalisation_confirmation_screen_header">تأكيد</string>
+    <string name="preview">معاينة</string>
+    <string name="done">انتهى</string>
+    <string name="send_this_gift">إرسال بطاقة الهدايا الإلكترونية هذه</string>
+    <string name="greeting_screen_title">اضافة بطاقة تهنئة</string>
+    <string name="filter_by_gifs_button_label">صور GIF</string>
+    <string name="filter_by_arabic_button_label">عربي</string>
+    <string name="select_occasion_dialog_title">حدد المناسبة</string>
+    <string name="available_design_count_template">%1$d تصاميم</string>
+    <string name="continue_button_label">يكمل</string>
+    <string name="custom_text_entry_done_button_label">انتهى</string>
+    <string name="delivery_details_suggestion"> للمعلومية..تقدر ترسلها عن طريق الرسائل النصية أو البريد الالكتروني..أو كلها!</string>
+    <string name="edit_delivery_footer_label">@string/delivery</string>
+    <string name="confirmation_screen_preview_button_label">@string/preview</string>
+    <string name="name_error">الرجاء كتابة اسم المدى اليه</string>
+    <string name="email_error">الرجاء ادخال البريد الإلكتروني للمهدى إليه</string>
+    <string name="delivery_date_error">اختر وقت التوصيل</string>
+    <string name="proceed_to_checkout_button_label">انتقل إلى الخروج</string>
+    <string name="gift_receiver_template">إهداء %1$s</string>
+
+    <string name="atb_success_toast_title">إضافة الى سلة الهدايا</string>
+    <string name="atb_success_toast_description">تمت اضافة بطاقة الهدايا الإلكترونية الى سلة الهدايا</string>
+    <string name="add_to_cart_error_toast_title">صار فيه خطأ</string>
+    <string name="add_to_cart_error_toast_description">حاول مرة ثانية</string>
+    <string name="update_cart_success_toast_description">تم تحديث سلة الهدايا</string>
+    <string name="sender_name">اسم المرسل</string>
+    <string name="sent_by">إرسالها بواسطة •</string>
+
+    <string name="skin_button_label">تخطي</string>
+
+    <string name="custom_text_entry_text_field_hint">أدخل رسالتك هنا</string>
+    <string name="custom_text_skip_button_label">تخطي المرحلة</string>
+    <string name="skipped_personalisation_container_title">لقد تخطيت التخصيص</string>
+    <string name="skipped_personalisation_container_description">اضغط هنا لإضافة لمستك الشخصية حطيها لمستك الفنية احلى</string>
+    <string name="personalization_skipped_with_media_only_title">نسيت إضافة تحية الغلاف او رسالة شخصية؟</string>
+
+    <string name="photo_video_picker_screen_title">اضافة صورة أو فيديو</string>
+    <string name="add_photo_button_label">إضافة صورة</string>
+    <string name="add_video_button_label">اضافة صورة أو فيديو</string>
+    <string name="divider_button_label">او</string>
+    <string name="skip_photo_video_step_label">تخطي هذه الخطوة</string>
+    <string name="review_photo_screen_title">مراجعة الصورة</string>
+    <string name="review_video_screen_title">مراجعة الفيديو</string>
+    <string name="media_edit_discard_button_label">نبذ</string>
+    <string name="media_edit_continue_button_label">"المتابعة "</string>
+    <string name="edit_discard_confirmation_dialog_description">ستفقد التعديلات التي أجريتها. هل تريد التخلص؟</string>
+    <string name="edit_discard_confirmation_dialog_negative_text">لا</string>
+    <string name="edit_discard_confirmation_dialog_positive_text">نعم</string>
+    <string name="media_edit_label">تعديل</string>
+
+</resources>

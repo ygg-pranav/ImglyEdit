@@ -1,0 +1,91 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id("ly.img.android.sdk").version("10.5.0")
+}
+
+imglyConfig {
+
+    finalModule = true
+
+    pesdk {
+        enabled true
+        licensePath 'pesdk_android_license'
+    }
+
+    vesdk {
+        enabled true
+        licensePath "vesdk_android_license"
+    }
+
+    modules {
+        include 'ui:core'
+        include 'ui:text'
+        include 'ui:focus'
+        include 'ui:frame'
+        include 'ui:brush'
+        include 'ui:filter'
+        include 'ui:sticker'
+        include 'ui:overlay'
+        include 'ui:transform'
+        include 'ui:adjustment'
+        include 'ui:text-design'
+
+        include 'ui:video-trim'
+        include 'ui:video-library'
+        include 'ui:video-composition'
+        include 'ui:audio-composition'
+        include 'ui:giphy-sticker'
+
+        include 'backend:serializer'
+        include 'backend:headless'
+        include 'backend:background-removal'
+        include 'backend:sticker-animated'
+        include 'backend:sticker-smart'
+
+        include 'assets:font-basic'
+        include 'assets:frame-basic'
+        include 'assets:filter-basic'
+        include 'assets:overlay-basic'
+        include 'assets:sticker-shapes'
+        include 'assets:sticker-emoticons'
+    }
+}
+
+android {
+    namespace 'com.example.photo_video'
+    compileSdk rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdk rootProject.ext.minSdkVersion
+        targetSdk rootProject.ext.targetSdkVersion
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            resValue "string", "media_content_provider_authority", "com.yougotagift.release.mediaprovider"
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            resValue "string", "media_content_provider_authority", "com.yougotagift.debug.mediaprovider"
+        }
+        staging {
+            resValue "string", "media_content_provider_authority", "com.yougotagift.staging.mediaprovider"
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation libs.androidx.appcompat
+}
