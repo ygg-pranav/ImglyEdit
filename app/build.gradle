@@ -6,6 +6,7 @@ plugins {
     id("org.sonarqube") version "3.4.0.2513"
     id "org.jetbrains.kotlin.kapt"
     id 'dagger.hilt.android.plugin'
+    id 'com.google.devtools.ksp' version '1.7.20-1.0.6' apply false
     //alias(libs.plugins.sentry)
 }
 

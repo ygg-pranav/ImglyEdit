@@ -19,6 +19,7 @@ import ly.img.android.pesdk.backend.model.state.PhotoEditorSaveSettings
 import ly.img.android.pesdk.backend.model.state.TrimSettings
 import ly.img.android.pesdk.backend.model.state.VideoEditorSaveSettings
 import ly.img.android.pesdk.backend.model.state.manager.SettingsList
+import ly.img.android.pesdk.backend.model.state.manager.SettingsList.DEBUG_SETTINGS_LIST_CREATOR
 import ly.img.android.pesdk.ui.activity.PhotoEditorActivityResultContract
 import ly.img.android.pesdk.ui.activity.VideoEditorActivityResultContract
 import java.io.File
@@ -361,7 +362,10 @@ private fun getPhotoEditorSettings(
     .configure<PhotoEditorSaveSettings> {
         it.setExportFormat(ImageExportFormat.JPEG)
         it.jpegQuality = exportQuality
+    }.apply {
+        DEBUG_SETTINGS_LIST_CREATOR = true
     }
+
 
 private fun getVideoEditorSettings(
     videoUri: Uri,
@@ -377,6 +381,8 @@ private fun getVideoEditorSettings(
     .configure<VideoEditorSaveSettings> {
         //Recommended bits/pixel rate for good quality/size balance
         it.bitsPerPixel = 0.04f
+    }.apply {
+        DEBUG_SETTINGS_LIST_CREATOR = true
     }
 
 sealed class PickerState {
