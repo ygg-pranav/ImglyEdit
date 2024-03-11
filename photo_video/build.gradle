@@ -1,7 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
-    id("ly.img.android.sdk").version("10.8.2")
+    id("ly.img.android.sdk").version("10.5.0")
     id 'com.google.devtools.ksp' version '1.7.20-1.0.6' apply false
 }
 
@@ -11,12 +11,12 @@ imglyConfig {
 
     pesdk {
         enabled true
-        licensePath 'pesdk_android_license'
+        licensePath null
     }
 
     vesdk {
         enabled true
-        licensePath "vesdk_android_license"
+        licensePath null
     }
 
     modules {
