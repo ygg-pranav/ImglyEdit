@@ -19,8 +19,6 @@ import com.yougotagift.app.personalization.ui.custommessage.CustomMessageScreen
 import com.yougotagift.app.personalization.ui.mediapicker.MediaPickerScreen
 import dagger.hilt.android.AndroidEntryPoint
 
-const val KEY_ROUTE = "key_root"
-
 @AndroidEntryPoint
 open class PersonalizationLandingActivity : ComponentActivity() {
 
@@ -94,4 +92,3 @@ open class PersonalizationLandingActivity : ComponentActivity() {
         }
     }
 }
-

@@ -9,8 +9,8 @@ pluginManagement {
         maven(url = "https://sdk.uxcam.com/android/")
     }
     plugins {
-        id("com.android.application") version "7.4.0"
-        id("com.android.library") version "7.4.0"
+        id("com.android.application") version "8.10.0"
+        id("com.android.library") version "8.10.0"
         kotlin("android") version "1.7.0"
         kotlin("kapt") version "1.7.0"
     }

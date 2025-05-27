@@ -1,6 +1,6 @@
 # Add project specific ProGuard rules here.
 # You can control the set of applied configuration files using the
-# proguardFiles setting in build.gradle.
+# proguardFiles setting in build.gradle.kts.
 #
 # For more details, see
 #   http://developer.android.com/guide/developing/tools/proguard.html
@@ -64,12 +64,9 @@
 -keep public class * extends android.app.Activity
 -keep public class * extends android.app.Application
 -keep public class * extends android.app.Service
--keep public class com.ygag.activities.YGAGHomeActivity { *; }
--keep public class com.ygag.manager.GiftCardsManager { *; }
 -keep public class * extends android.content.BroadcastReceiver
 -keep public class * extends android.content.ContentProvider
 -keep public class * extends android.preference.Preference
--keep public class com.android.vending.billing.IInAppBillingService
 -keep public class * extends android.view.View {
     public <init>(android.content.Context);
     public <init>(android.content.Context, android.util.AttributeSet);
@@ -89,14 +86,11 @@
 
 -keep class org.apache.commons.logging.**               { *; }
 -keep class com.amazonaws.org.apache.commons.logging.** { *; }
--keep class com.amazonaws.services.sqs.QueueUrlHandler  { *; }
 -keep class com.amazonaws.javax.xml.transform.sax.*     { public *; }
 -keep class com.amazonaws.javax.xml.stream.**           { *; }
 -keep class com.amazonaws.services.**.model.*Exception* { *; }
 -keep class com.amazonaws.internal.**                   { *; }
 -keep class org.codehaus.**                             { *; }
--keep class org.joda.time.tz.Provider                   { *; }
--keep class org.joda.time.tz.NameProvider               { *; }
 -keepattributes Signature,*Annotation*,EnclosingMethod
 -keepnames class com.fasterxml.jackson.** { *; }
 -keepnames class com.amazonaws.** { *; }
@@ -119,9 +113,6 @@
 -dontwarn com.amazonaws.**
 -dontwarn com.amazonaws.services.sqs.**
 -dontnote com.amazonaws.services.sqs.QueueUrlHandler
--keepclassmembers class fqcn.of.javascript.interface.for.webview {
-   public *;
-}
 -keepclassmembers class * implements java.io.Serializable {
     private static final java.io.ObjectStreamField[] serialPersistentFields;
     private void writeObject(java.io.ObjectOutputStream);
@@ -129,19 +120,9 @@
     java.lang.Object writeReplace();
     java.lang.Object readResolve();
 }
--keepnames class com.facebook.FacebookActivity
--keepnames class com.facebook.CustomTabActivity
 -keep class com.facebook.** { *; }
--keep class com.facebook.all.All
 -dontwarn javax.annotation.**
 -dontwarn com.googlecode.mp4parser.**
--keep public class com.android.vending.billing.IInAppBillingService {
-    public static com.android.vending.billing.IInAppBillingService asInterface(android.os.IBinder);
-    public android.os.Bundle getSkuDetails(int, java.lang.String, java.lang.String, android.os.Bundle);
-}
-
-
-
 
 #for crashlytics
 -keepattributes SourceFile,LineNumberTable
@@ -153,42 +134,11 @@
 
 
 #for google play services
--keep public class com.google.android.gms.common.internal.safeparcel.SafeParcelable {
-    public static final *** NULL;
-}
 -keepnames class * implements android.os.Parcelable
 -keepclassmembers class * implements android.os.Parcelable {
   public static final *** CREATOR;
 }
--keep @interface android.support.annotation.Keep
--keep @android.support.annotation.Keep class *
--keepclasseswithmembers class * {
-  @android.support.annotation.Keep <fields>;
-}
--keepclasseswithmembers class * {
-  @android.support.annotation.Keep <methods>;
-}
--keep @interface com.google.android.gms.common.annotation.KeepName
--keepnames @com.google.android.gms.common.annotation.KeepName class *
--keepclassmembernames class * {
-  @com.google.android.gms.common.annotation.KeepName *;
-}
--keep @interface com.google.android.gms.common.util.DynamiteApi
--keep public @com.google.android.gms.common.util.DynamiteApi class * {
-  public <fields>;
-  public <methods>;
-}
 -dontwarn android.security.NetworkSecurityPolicy
-
-
-
-
-# for barcode scanner
--keepclassmembers class net.sourceforge.zbar.ImageScanner { *; }
--keepclassmembers class net.sourceforge.zbar.Image { *; }
--keepclassmembers class net.sourceforge.zbar.Symbol { *; }
--keepclassmembers class net.sourceforge.zbar.SymbolSet { *; }
-
 
 # for gson parser
 -dontwarn sun.misc.**
@@ -197,16 +147,10 @@
 -keep class com.ygag.models.** { *; }
 # Prevent proguard from stripping interface information from TypeAdapterFactory,
 # JsonSerializer, JsonDeserializer instances (so they can be used in @JsonAdapter)
--keep class * implements com.google.gson.TypeAdapterFactory
--keep class * implements com.google.gson.JsonSerializer
--keep class * implements com.google.gson.JsonDeserializer
-
 
 #for loopj async client
 -keep class cz.msebera.android.httpclient.** { *; }
 -keep class com.loopj.android.http.** { *; }
-
-
 
 #for glide
 -keep public class * implements com.bumptech.glide.module.GlideModule
@@ -215,10 +159,6 @@
   **[] $VALUES;
   public *;
 }
--keep class com.bumptech.glide.integration.volley.VolleyGlideModule
--keep class com.bumptech.glide.integration.okhttp3.OkHttpGlideModule
-
-
 
 # EventBus
 -keep class de.greenrobot.event.** { *; }
@@ -230,27 +170,12 @@
 }
 -dontwarn de.greenrobot.event.util.*$Support
 -dontwarn de.greenrobot.event.util.*$SupportManagerFragment
--keepclassmembers class ** {
-    @org.greenrobot.eventbus.Subscribe <methods>;
-}
--keep enum org.greenrobot.eventbus.ThreadMode { *; }
 # Only required if you use AsyncExecutor
--keepclassmembers class * extends org.greenrobot.eventbus.util.ThrowableFailureEvent {
-    <init>(java.lang.Throwable);
-}
-
-
 
 
 #for facebook
 # Keep our interfaces so they can be used by other ProGuard rules.
 # See http://sourceforge.net/p/proguard/bugs/466/
--keep,allowobfuscation @interface com.facebook.common.internal.DoNotStrip
-# Do not strip any method/class that is annotated with @DoNotStrip
--keep @com.facebook.common.internal.DoNotStrip class *
--keepclassmembers class * {
-    @com.facebook.common.internal.DoNotStrip *;
-}
 # Keep native methods
 -keepclassmembers class * {
     native <methods>;
@@ -265,14 +190,9 @@
 
 #for mp4parser
 
--keep class * implements com.coremedia.iso.boxes.Box { *; }
 -dontwarn com.coremedia.iso.boxes.**
 -dontwarn com.googlecode.mp4parser.authoring.tracks.mjpeg.**
 -dontwarn com.googlecode.mp4parser.authoring.tracks.ttml.**
-
--keepclassmembers,allowobfuscation class * {
-  @com.google.gson.annotations.SerializedName <fields>;
-}
 
 -dontwarn carbon.BR
 -dontwarn carbon.internal**
@@ -289,7 +209,7 @@
 
 # Add project specific ProGuard rules here.
 # You can control the set of applied configuration files using the
-# proguardFiles setting in build.gradle.
+# proguardFiles setting in build.gradle.kts.
 #
 # For more details, see
 #   http://developer.android.com/guide/developing/tools/proguard.html
@@ -364,24 +284,3 @@
 # Gson specific classes
 -keep class sun.misc.Unsafe**{ *; }
 -keep class com.google.gson.stream.**{ *; }
-
-# AuthSettings
--keep class androidx.datastore**{*;}
--keep class com.yougotagift.app.onboarding.OnBoardingSettings**{*;}
--keep class com.yougotagift.app.onboarding.OnBoardingSettingsOrBuilder**{*;}
--keep class com.yougotagift.app.onboarding.OnBoardingSettingsOuterClass**{*;}
-
-
-# AuthSettings
--keep class androidx.datastore**{*;}
--keep class com.yougotagift.app.groupgift.GroupGiftSettings**{*;}
--keep class com.yougotagift.app.groupgift.GroupGiftSettingsOrBuilder**{*;}
--keep class com.yougotagift.app.groupgift.GroupGiftSettingsOuterClass**{*;}
-
-
-# AuthSettings
--keep class androidx.datastore**{*;}
--keep class com.yougotagift.app.groupgift.GroupGiftSettings**{*;}
--keep class com.yougotagift.app.groupgift.GroupGiftSettingsOrBuilder**{*;}
--keep class com.yougotagift.app.groupgift.GroupGiftSettingsOuterClass**{*;}
-
