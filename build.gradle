@@ -1,8 +1,8 @@
 buildscript {
     ext {
         minSdkVersion = 26
-        targetSdkVersion = 33
-        compileSdkVersion = 33
+        targetSdkVersion = 35
+        compileSdkVersion = 35
         appVersionCode = 319
         appVersionName = "7.1.6"
         testBuildVersion = "35.1"//"sprint.distributed-build"
@@ -35,8 +35,12 @@ buildscript {
 }
 
 plugins {
-    alias libs.plugins.ksp apply false
-    alias libs.plugins.sentry apply true
+    alias(libs.plugins.android.library) apply false
+    alias(libs.plugins.compose.compiler) apply false
+    alias(libs.plugins.firebase.crashlitycs) apply false
+    alias(libs.plugins.hilt) apply false
+    alias(libs.plugins.kotlin.android) apply false
+    alias(libs.plugins.ksp) apply false
 }
 
 task clean(type: Delete) {

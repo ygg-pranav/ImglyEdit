@@ -1,47 +1,40 @@
 plugins {
-    id 'com.android.library'
-    id 'org.jetbrains.kotlin.android'
-    id "org.jetbrains.kotlin.kapt"
-    id 'dagger.hilt.android.plugin'
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.ksp)
 }
 
 android {
-    compileSdk rootProject.ext.compileSdkVersion
+    compileSdk = rootProject.ext["compileSdkVersion"] as Int
 
     defaultConfig {
-        minSdk rootProject.ext.minSdkVersion
-        targetSdk rootProject.ext.targetSdkVersion
+        minSdk = rootProject.ext["minSdkVersion"] as Int
+        targetSdk = rootProject.ext["targetSdkVersion"] as Int
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles "consumer-rules.pro"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
-        release {
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
-    }
-    kotlinOptions {
-        jvmTarget = '11'
-    }
-    buildFeatures {
-        compose true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion compose_compiler_version
-    }
-    packagingOptions {
-        resources {
-            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        getByName("release") {
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
 
-    namespace 'com.yougotagift.app.personalization'
+    kotlin {
+        jvmToolchain(17)
+    }
+
+    buildFeatures {
+        compose = true
+    }
+
+    namespace="com.yougotagift.app.personalization"
 }
 
 hilt {
@@ -50,19 +43,18 @@ hilt {
 
 dependencies {
 
-
-    implementation(project(':photo_video'))
+    implementation(project(":photo_video"))
 
     //region Hilt
     implementation(libs.hilt)
-    implementation libs.androidx.media3.exoplayer
-    implementation libs.androidx.media3.ui
-    kapt(libs.hilt.compiler)
+    implementation(libs.androidx.media3.exoplayer)
+    implementation(libs.androidx.media3.ui)
+    ksp(libs.hilt.compiler)
 
-    implementation libs.fragment.ktx
+    implementation(libs.fragment.ktx)
 
     // Import the Compose BOM
-    api(platform("androidx.compose:compose-bom:2023.05.01"))
+    api(platform("androidx.compose:compose-bom:2025.05.01"))
 
     debugApi("androidx.compose.ui:ui-tooling")
     debugApi("androidx.compose.ui:ui-test-manifest")
